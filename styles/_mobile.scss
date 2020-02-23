@@ -77,11 +77,18 @@
     grid-template-columns: repeat(2, 1fr);
   } */
 
-    .img-and-bio {
+ /*    .img-and-bio {
    grid-template-areas: 
   'bioimage'
   'bio bio';
   grid-template-columns: 1fr;
+  } */
+    .img-and-bio {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-vrap {
+    margin: 0 auto;
   }
     .contact-info-form {
     flex-direction: column;
@@ -90,10 +97,9 @@
     .contact-form {
       width: 100%;
       margin-top: 30px;
-
     }
-
   }
+
 }
 
 //smartphones

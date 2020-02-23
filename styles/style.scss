@@ -22,9 +22,14 @@ h1, h2, h3 {
   font-weight: 400;
   &.lg-heading {
     font-size: 4rem;
+    width: fit-content;
   }
   &.sm-heading {
     margin-bottom: 2rem;
+    width: inherit;
+    opacity: 0;
+    animation: opac 2s forwards;
+    animation-delay: 1.5s;
     //padding: 0.2rem ;
     //opacity: 0;
   }
@@ -81,47 +86,55 @@ main {
   }
 }
 
-/* .about-info {
-  
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: 
-  'bioimage bio bio'
-  'job1 job2 job3';
- // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-} */
-
 .img-and-bio {
   display: grid;
   grid-gap: 30px;
   //grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-areas: 
   'bioimage bio bio';
-  transform:  translateY(10px) scale(0.9);
-  opacity: 0.2;
 }
 
 .jobovi {
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 50px;
   
 
 }
 
+.img-vrap {
+  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  overflow: hidden;
+  background: linear-gradient(180deg, #000 1%, $secondary-color 50%);
+  width: 250px;
+  height: 300px;
+  opacity: 0.2;
+  transform:  translateY(10px) scale(0.9);
+}
+
+
+
 .bio-image {
+  overflow: hidden;
+  //padding: 5px;
+  clip-path: polygon(50% 2%, 98% 2%, 98% 74%, 50% 98%, 2% 74%, 2% 2%);
+  width: 250px;
+  height: 300px;  
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   grid-area: bioimage;
   margin: auto;
-  border-radius: 50%;
-  border: $secondary-color 3px solid;
+  //border-radius: 50%;
+  //border: $secondary-color 3px solid;
 }
 
 .bio {
   grid-area: bio;
   font-size: 1.5rem;
-
+  opacity: 0.2;
+  transform:  translateY(10px) scale(0.9);
 }
 
 /* 
@@ -149,17 +162,119 @@ main {
   opacity: 0.4;
   /* transform: scale(0.9) translateZ(220px); */
   transform:  translateY(10px) scale(0.9);
+  h3, p {
+    //z-index: 1;
+  }
+}
+
+//CARDS ABOUT ME
+
+.card {
+  margin: 0 auto;
+  width: 280px;
+  height: 320px;
+  background: lighten($primary-color, 5);
+  //text-align: center;
+  
+  .card-img-vrap {
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+    background: #005c7b;
+    height: 160px;
+    overflow: hidden;
+       .card-img {
+      width: 100%;
+      height: 160px;
+      clip-path: polygon(50% 0%, 100% 0, 100% 74%, 50% 99%, 0 74%, 0 0);
+      background: url('../images/tehnologies1.jpg');
+      //background: #005c7b;
+      filter: blur(5px);
+      transform: translateY(-10px);
+      
+      //animation-delay: 0.5s;
+    }
+
+  }
+   .card-text{
+      text-align: center;
+      margin: 10px;
+      opacity: 0;
+      transform: translateY(-10px);
+      
+    }
+
+}
+
+.card:nth-child(2) {
+  .card-img {
+    background:url('../images/tehnologies2.jpg');
+    background-size: cover;
+  }
+}
+.card:nth-child(3) {
+  .card-img {
+    background:url('../images/browsers.jpg');
+    background-size: cover;
+  }
+}
+
+.card-img-vrap2 {
+  animation: card-vrap 2s forwards ease;
+  animation-delay: 0.5s;
+}
+
+.card-img2 {
+  animation: card-img 1.5s forwards ease;
+}
+
+.card-text2 {
+  animation: card-text 1s forwards ease;
+  animation-delay: 1s;
+}
+
+
+
+@keyframes card-img {
+  to {
+    //background: url('../images/tehnologies1.jpg');
+    filter: none;
+    transform: none;
+  }
+}
+
+@keyframes card-vrap {
+  to {background: $secondary-color;}
+}
+
+@keyframes card-text {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .border-div {
   position: relative;
-  bottom: 0;
-  // margin: 0 auto;
+  bottom: -2px;
+  margin: 0 auto;
   width: 80%;
-  border-bottom: 1px solid $secondary-color;
+  height: 4px;
+  //background: linear-gradient(90deg, rgba(255,255,255,0) 4%, $secondary-color 10%, #000 50%,$secondary-color 90%, rgba(0,212,255,0) 96%);
+  background: $secondary-color;
+  //background: linear-gradient(90deg, $secondary-color 20%, #000);
+  //border-bottom: 4px solid $secondary-color;
 }
+// TEHNOGLOGIES
 
+.tehnologies {
+  font-size: 74px;
+  font-weight: bold;
+  color: rgb(240, 238, 238);
+  z-index: -1;
+  position: relative;
+  top: 50px;
+  margin: 0;
 
+}
 
 // work/projects 
 
@@ -171,16 +286,10 @@ main {
 
   img {
     width: 100%;
-    border: 2px solid white;
 /*     border-right: 7px solid lighten($color:rgb(0, 247, 255), $amount: 25);
     border-left: 7px solid #000; */
-    height: 200px;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
+    height: 100%;
+    margin: 0 auto;
   }
 }
 
