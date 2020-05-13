@@ -1,33 +1,17 @@
-//widescreens
-
+/* //widescreens
 @include mediaXl {
-/*   .projects {
-    grid-template-columns: repeat(4, 1fr);
-  } */
+} */
 
-}
-
-//desktops
-  
+/* //desktops
 @include mediaLg {
-/*     .projects {
-    grid-template-columns: repeat(3, 1fr);
-  } */
-/*     .about-info {
-    grid-template-areas: 
-    "bioimage bio"
-    'job1 job2'
-    'job3';
-    grid-template-columns: 1fr;
-  }  */
-}
+} */
 
 //tablets
-
 @include mediaMd {
   main {
     align-items: center;
     text-align: center;
+    padding: 2.8rem;
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
@@ -36,6 +20,7 @@
       width: 100%;
     }
   }
+
   ul.menu-nav, div.menu-branding {
     float: none;
     width: 100%;
@@ -54,43 +39,22 @@
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0);
-
-    .portrait {
-      background: url();
-      width: 150px;
-      height: 150px;
-      /* background-size: cover;
-      filter: grayscale(90); */
-    }
   }
 
-  /* .about-info {
-    grid-template-areas: 
-    "bioimage"
-    'bio'
-    'job1'
-    'job2'
-    'job3';
-    grid-template-columns: 1fr;
-  } */
-/*     .projects {
-    grid-template-columns: repeat(2, 1fr);
-  } */
+  .menu-btn {
+    right: 15px;
+  }
 
- /*    .img-and-bio {
-   grid-template-areas: 
-  'bioimage'
-  'bio bio';
-  grid-template-columns: 1fr;
-  } */
-    .img-and-bio {
+  .img-and-bio {
     display: flex;
     flex-direction: column;
   }
+
   .img-vrap {
     margin: 0 auto;
   }
-    .contact-info-form {
+
+  .contact-info-form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -100,24 +64,30 @@
     }
   }
 
+  .title-heading {
+    margin: 0 auto;
+  }
 }
 
 //smartphones
-
 @include mediaSm {
   .img-and-bio {
     display: flex;
     flex-direction: column;
   }
-/*     .projects {
-    grid-template-columns: 1fr;
-  } */
+
+  .bio {
+    margin: 24px;
+  }
+
   main#home h1 {
     margin-top: 10vh;
   }
+
   main {
     padding: 20px;
   }
+
   .contact-info {
     width: 100%;
     ul {
@@ -140,14 +110,22 @@
   .menu-btn {
     right: 10px;
   }
+
+  .technologies-vrap {
+    display: none;
+  }
+  .technologies-vrap {
+    &.technologies-vrap-small {
+      display: block;
+    } 
+  }
+
+  .title-heading {
+    margin: 0 auto;
+  }
 }
 
 
 //old phones 
-
 /* @include mediaSm {
-
-  main {
-    padding: 20px;
-  }
 } */

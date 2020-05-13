@@ -1,93 +1,36 @@
 var scroll = window.requestAnimationFrame ||
   function (callback) {
-    window.setTimeout(callback, 1000 / 60)
+    window.setTimeout(callback, 1000 / 70)
   };
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 var imgBio = document.querySelectorAll('.imgbiojs')
 var contactForm = document.querySelectorAll('.contact-info-formjs');
-var cardA = document.querySelector('.cardA');
-var cardB = document.querySelector('.cardB');
-var cardC = document.querySelector('.cardC');
+
+const tech = document.querySelector('.technologies-vrap')
+const techSmall = document.querySelector('.technologies-vrap-small')
 
 
 function loop() {
 
-  elementsToShow.forEach(function (element) {
-    if (isElementInViewport(element)) {
-      element.classList.add('kurcinaa');
-    } else {
-      element.classList.remove('kurcinaa');
-    }
-  })
-
   imgBio.forEach(function (element) {
     if (isElementInViewport(element)) {
       element.classList.add('img-bio-apprear');
-    } else {
-      element.classList.remove('img-bio-apprear');
     }
-
   })
 
   contactForm.forEach(function (element) {
     if (isElementInViewport(element)) {
       element.classList.add('contact-form-apprear');
-    } else {
-      element.classList.remove('contact-form-apprear');
     }
-
   })
 
-
-  if (isElementInViewport(cardA)) {
-    var cardImg = document.querySelector('.card-img');
-    var cardVrap = document.querySelector('.card-img-vrap');
-    var cardText = document.querySelector('.card-text');
-
-    cardImg.classList.add('card-img2');
-    cardText.classList.add('card-text2');
-    cardVrap.classList.add('card-img-vrap2');
-
-  } else {
-
+  if (isElementInViewport(tech)) {
+    tech.classList.remove('on-appear');
   }
 
-
-
-
-  if (isElementInViewport(cardB)) {
-    var cardImgB = document.querySelector('.card-imgB');
-    var cardVrapB = document.querySelector('.card-img-vrapB');
-    var cardTextB = document.querySelector('.card-textB');
-
-    cardImgB.classList.add('card-img2');
-    cardTextB.classList.add('card-text2');
-    cardVrapB.classList.add('card-img-vrap2');
-
-  } else {
-
+  if (isElementInViewport(techSmall)) {
+    techSmall.classList.remove('on-appear');
   }
-
-  if (isElementInViewport(cardC)) {
-    var cardImgC = document.querySelector('.card-imgC');
-    var cardVrapC = document.querySelector('.card-img-vrapC');
-    var cardTextC = document.querySelector('.card-textC');
-
-    cardImgC.classList.add('card-img2');
-    cardTextC.classList.add('card-text2');
-    cardVrapC.classList.add('card-img-vrap2');
-
-  }
-
-
-
-
-
-
-
-
-
-  //img and bio
 
   scroll(loop);
 }
@@ -107,3 +50,31 @@ function isElementInViewport(el) {
     (rect.top >= 0 && rect.bottom - rect.height / 2 <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  (function scrollSpy() {
+    const targets = document.querySelectorAll('.itemSpy'),
+      options = {
+        threshold: 0.5
+      };
+    //check if IntersectionObserver is suported
+    if ('IntersectionObserver' in window) {
+      (() => {
+        const inView = target => {
+          const interSec = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              const el = entry.target;
+              let currentNav = document.querySelector(`#${el.id}Id`);
+              (entry.isIntersecting) ? currentNav.classList.add('current') : currentNav.classList.remove('current')
+            });
+
+          }, options);
+          interSec.observe(target)
+
+        }
+        targets.forEach(inView)
+      })();
+    }
+  })();
+});

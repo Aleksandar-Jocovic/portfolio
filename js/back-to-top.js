@@ -21,10 +21,6 @@ function scrollFunction() {
 
 button.addEventListener('click', smoothScroll);
 
-/* function backToTop() {
-  window.scrollTo(0, 0);
-} */
-
 function smoothScroll() {
   var targetPosition = 0;
   var startPosition = window.pageYOffset;

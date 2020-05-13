@@ -1,0 +1,142 @@
+.technologies-vrap {
+  width: 420px;
+  margin: 0 auto;
+  user-select: none;
+
+.techno-skill {
+  transform: scale(1.4);
+  background: transparent !important;
+  z-index: 1;
+}
+.technologies-second {
+  display: flex;
+  transition: 1s;
+}
+.technologies-first {
+  display: flex;
+  position: relative;
+  left: -70px;
+  top: 33px;
+  transition: 1s;
+}
+.technologies-last {
+  display: none;
+  position: relative;
+  left: 70px;
+  top: -33px;
+  transition: 1s;
+}
+
+.techno-vrap {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 136px;
+  height:131px;
+  padding: 3px 3px;
+  margin: 2px;
+  background-color: $secondary-color;
+  transition: 0.3s;
+}
+
+
+.techno {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba($primary-color,0.7);
+  width: 130px;
+  height: 125px;
+  p { 
+  text-align: center;
+  line-height: 115px;
+  margin: 0px
+  }
+}
+}
+
+.technologies-vrap {
+  &.technologies-vrap-small {
+    width: 280px;
+    display: none;
+
+    .technologies-single {
+      position: relative;
+      left: 70px;
+      top: 60px;
+      transition: 1s;
+    }
+    .technologies-single {
+      &.end {
+      top: -60px;
+      }
+    }
+    .technologies-second {
+      display: flex;
+      position: relative;
+      left: 70px;
+      transition: 1s;
+    }
+    .technologies-first {
+      left: 0px;
+      top: 33px;
+      transition: 1s;
+    }
+    .technologies-last {
+      left: 0px;
+      top: -33px;
+      transition: 1s;
+    }
+  }
+}
+
+
+.techno-vrap:hover {
+  transform: scale(1.1);
+  background: transparent;
+}
+
+.techno-skill:hover {
+  background: $secondary-color;
+}
+
+.technologies-vrap {
+  &.on-appear {
+    .technologies-second {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+    .technologies-last {
+      position: relative;
+      top: 0px;
+    }
+  }
+}
+
+
+.technologies-vrap-small {
+      &.on-appear {
+    .technologies-second {
+      margin-bottom: 30px;
+      margin-top: 30px;
+
+    }
+    .technologies-single {
+      position: relative;
+      top: 30px;
+    }
+  }
+  
+}
+
+@include mediaMd {
+  .technologies-vrap {
+    .technologies-first {
+      left: 70px;
+      .responsive-part {
+        display: none;
+      }
+    }
+    .technologies-last {
+      display: flex;
+    }
+
+  }
+}
+

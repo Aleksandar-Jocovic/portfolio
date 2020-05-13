@@ -1,58 +1,75 @@
 .angle-btn-vrap {
-  margin: 60px;
+  font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: space-between;
-  width: 250px;
+  width: 260px;
   height: 50px;
   overflow: hidden;
+  margin-top: 8px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
  .angle-btn {
-  width: 125px;
-  height: 60px;
+  width: 130px;
   align-items: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  text-decoration: none;
-  
+  text-decoration: none; 
 }
 
-.angle-btn:nth-child(1) {
-  background: rgb(179, 255, 0);
-  transform: rotateZ(10deg);
-  height: 100px;
-  position: relative;
-  top: -20px;
-  right: 5px;
-  
-  
-}
-.angle-btn:nth-child(2) {
-  background: rgb(0, 247, 255);
-  transform: rotateZ(10deg);
-  height: 100px;
-  position: relative;
-  top: -20px;
-  left: 5px;
-  
-  
-}
- .angle-btn p {
+.angle-btn p {
   transform: rotateZ(-10deg);
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: black;
 }
 
 .angle-btn svg {
-  fill: black;
+  fill: rgb(0, 0, 0);
   transform: rotateZ(-10deg);
   position: relative;
   top: -10px;
 }
 
+.angle-btn:nth-child(1) {
+  background: $secondary-color;
+  transform: rotateZ(10deg);
+  height: 80px;
+  position: relative;
+  top: -12px;
+  right: 5px;
+  p {
+    font-weight: 900;
+    position: relative;
+    left: 5px;
+  }
+}
+
+.angle-btn:nth-child(2) {
+  background: rgb(0, 0, 0);
+  transform: rotateZ(10deg);
+  height: 80px;
+  position: relative;
+  top: -12px;
+  left: 5px;
+  p {
+    color: white;
+  }
+  svg {
+    fill: white;
+    right: 5px;
+    top: -8px;
+  }
+}
+
+.angle-btn:nth-child(1):hover {
+  background: lighten($color:$secondary-color, $amount: 10);;
+}
+
+.angle-btn:nth-child(2):hover {
+  background: lighten($color:black, $amount: 10);
+}
