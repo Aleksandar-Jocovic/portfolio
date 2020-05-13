@@ -453,6 +453,21 @@ html {
           animation-delay: 1.5s;
 }
 
+.icons a {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.iconsSlideIn:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.iconsSlideIn:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
 .iconsSlideIn {
   -webkit-animation: iconsSlide 1s forwards ease-in-out;
           animation: iconsSlide 1s forwards ease-in-out;
@@ -489,27 +504,17 @@ html {
   }
 }
 
-.icons a:nth-child(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.icons a:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
 .slideIn {
-  -webkit-animation: slide 1.5s forwards ease-in;
-          animation: slide 1.5s forwards ease-in;
+  -webkit-animation: slide 2s forwards ease-in;
+          animation: slide 2s forwards ease-in;
   opacity: 0;
   position: relative;
-  right: 500px;
+  right: 580px;
 }
 
 @-webkit-keyframes slide {
   0% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   80% {
     opacity: 0.5;
@@ -527,7 +532,7 @@ html {
 
 @keyframes slide {
   0% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   80% {
     opacity: 0.5;
@@ -585,6 +590,31 @@ html {
             transform: none;
     opacity: 1;
   }
+}
+
+.item:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.item:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.item:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.item:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .item {
@@ -771,6 +801,7 @@ form .submit:hover {
 .technologies-vrap {
   width: 420px;
   margin: 0 auto;
+  margin-bottom: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1016,144 +1047,7 @@ form .submit:hover {
   background: #1a1a1a;
 }
 
-/* //widescreens
-@include mediaXl {
-} */
-/* //desktops
-@include mediaLg {
-} */
-@media screen and (max-width: 768px) {
-  main {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    padding: 2.8rem;
-  }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem;
-    font-size: unset;
-    font-size: 44px !important;
-    width: 100%;
-  }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  ul.menu-nav.show, div.menu-branding.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .menu-nav {
-    height: 75vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-branding {
-    height: 25vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  .menu-btn {
-    right: 15px;
-  }
-  .img-and-bio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .img-vrap {
-    margin: 0 auto;
-  }
-  .contact-info-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact-info-form .contact-form {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .title-heading {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .img-and-bio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .bio {
-    margin: 24px;
-  }
-  main#home h1 {
-    margin-top: 10vh;
-  }
-  main {
-    padding: 20px;
-  }
-  .contact-info {
-    width: 100%;
-  }
-  .contact-info ul {
-    padding: 0;
-    margin: 0;
-  }
-  .contact-info-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact-info-form .contact-form {
-    width: 100%;
-    margin-top: 30px;
-  }
-  #back-to-top-btn {
-    right: 5px;
-  }
-  .menu-btn {
-    right: 10px;
-  }
-  .technologies-vrap {
-    display: none;
-  }
-  .technologies-vrap.technologies-vrap-small {
-    display: block;
-  }
-  .title-heading {
-    margin: 0 auto;
-  }
-}
-
-/* @include mediaSm {
-} */
+/* @imp mobile in the end of file */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1197,7 +1091,7 @@ h1.lg-heading, h2.lg-heading, h3.lg-heading {
 }
 
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
   opacity: 0;
   -webkit-animation: opac 2s forwards;
@@ -1380,4 +1274,134 @@ main#home h1 {
   color: #fff;
   height: 60px;
 }
+
+/* //widescreens
+@include mediaXl {
+} */
+/* //desktops
+@include mediaLg {
+} */
+@media screen and (max-width: 768px) {
+  main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 2.7rem;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-size: unset;
+    font-size: 44px !important;
+    width: 100%;
+  }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show, div.menu-branding.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 75vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 25vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  .menu-btn {
+    right: 15px;
+  }
+  .img-and-bio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .img-vrap {
+    margin: 0 auto;
+  }
+  .contact-info-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-info-form .contact-form {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .title-heading {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bio {
+    margin: 24px;
+  }
+  main#home h1 {
+    margin-top: 10vh;
+  }
+  main {
+    padding: 20px;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-info ul {
+    padding: 0;
+    margin: 0;
+  }
+  .contact-info-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-info-form .contact-form {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #back-to-top-btn {
+    right: 5px;
+  }
+  .menu-btn {
+    right: 10px;
+  }
+  .technologies-vrap {
+    display: none;
+  }
+  .technologies-vrap.technologies-vrap-small {
+    display: block;
+  }
+  .title-heading {
+    margin: 0 auto;
+  }
+}
+
+/* @include mediaSm {
+} */
 /*# sourceMappingURL=style.css.map */

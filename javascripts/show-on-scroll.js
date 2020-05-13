@@ -1,7 +1,8 @@
 var scroll = window.requestAnimationFrame ||
   function (callback) {
-    window.setTimeout(callback, 1000 / 70)
+    window.setTimeout(callback, 1000 / 60)
   };
+
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 var imgBio = document.querySelectorAll('.imgbiojs')
 var contactForm = document.querySelectorAll('.contact-info-formjs');
@@ -13,22 +14,22 @@ const techSmall = document.querySelector('.technologies-vrap-small')
 function loop() {
 
   imgBio.forEach(function (element) {
-    if (isElementInViewport(element)) {
+    if (isElementInViewport(element) && !element.classList.add('img-bio-apprear')) {
       element.classList.add('img-bio-apprear');
     }
   })
 
   contactForm.forEach(function (element) {
-    if (isElementInViewport(element)) {
+    if (isElementInViewport(element) && !element.classList.contains('contact-form-apprear')) {
       element.classList.add('contact-form-apprear');
     }
   })
 
-  if (isElementInViewport(tech)) {
+  if (isElementInViewport(tech) && tech.classList.contains('on-appear')) {
     tech.classList.remove('on-appear');
   }
 
-  if (isElementInViewport(techSmall)) {
+  if (isElementInViewport(techSmall) && techSmall.classList.contains('on-appear')) {
     techSmall.classList.remove('on-appear');
   }
 

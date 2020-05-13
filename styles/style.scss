@@ -4,7 +4,9 @@
 @import 'scroll';
 @import 'tech';
 @import 'angle-btn';
-@import 'mobile';
+
+/* @imp mobile in the end of file */
+
 
 * {
   box-sizing: border-box;
@@ -36,7 +38,7 @@ h1, h2, h3 {
     width: fit-content;
   }
   &.sm-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 100%;
     opacity: 0;
     animation: opac 2s forwards;
@@ -127,6 +129,7 @@ main {
   grid-gap: 30px;
   grid-template-areas: 
   'bioimage bio bio';
+
 }
 
 .img-vrap {
@@ -189,3 +192,5 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+@import 'mobile';
