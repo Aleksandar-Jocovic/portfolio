@@ -712,10 +712,15 @@ html {
   border-left: 1px solid #858484;
 }
 
-.contact-info-item:nth-child(4):hover svg {
-  fill: #fff;
+.contact-info-item:nth-child(4):hover svg,
+.contact-info-item:nth-child(1):hover svg {
+  fill: #4d4d4d;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+}
+
+#email-contact-btn {
+  cursor: pointer;
 }
 
 .contact-form {
@@ -1145,6 +1150,15 @@ header {
 
 .pop-up-false {
   display: none;
+}
+
+#email-popup-button {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: #858484;
+  color: white;
+  margin: 0 0 10px 32px;
 }
 
 main {

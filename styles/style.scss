@@ -80,6 +80,15 @@ header {
   display: none;
 }
 
+#email-popup-button{
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  background-color: $secondary-color;
+  color: white;
+  margin: 0 0 10px 32px;
+
+}
 
 main {
   overflow: hidden;

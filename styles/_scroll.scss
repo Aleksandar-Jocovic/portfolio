@@ -171,7 +171,6 @@ html {
 }
 
 // icons animation 
-
 .icons a {
   animation-delay: 1s;
 }
@@ -307,12 +306,19 @@ html {
  
 }
 
-.contact-info-item:nth-child(4):hover {
+.contact-info-item:nth-child(4):hover,
+.contact-info-item:nth-child(1):hover {
   svg {
-    fill: #fff;
+    fill: $primary-color;
     @include easeOut
   }
 }
+
+//email itemm on contact page
+#email-contact-btn {
+  cursor: pointer;
+}
+
 
 // form
 .contact-form {

@@ -44,7 +44,7 @@ work.addEventListener('click', closeMenu);
 home.addEventListener('click', closeMenu);
 about.addEventListener('click', closeMenu);
 contact.addEventListener('click', closeMenu);
-/* contact.addEventListener('click', addCurrent); */
+
 
 function closeMenu() {
 
@@ -59,18 +59,6 @@ function closeMenu() {
 
 }
 
-/* function addCurrent() {
-  navItems.forEach(item => item.classList.remove('current'));
-  contact.classList.add('current');
-}
- */
-let choice;
-// code to be able to call nested function
-/* this.okkk = function (id) {
-  choice = document.getElementById(id);
-  navItems.forEach(item => item.classList.remove('current'));
-  choice.classList.add('current');
-} */
 const popUpButtons = document.querySelectorAll('.pop-up-btn');
 
 const popUps = document.getElementsByClassName('pop-up');
@@ -80,15 +68,17 @@ function mainFun() {
   document.getElementById('icons').onclick = btnFun
 }
 
-
+// pop up gmail and skype id 
 function btnFun(e) {
   if (e.target.tagName == 'BUTTON') {
-    console.log(e.target.id)
+    if (!popOne.classList.contains('pop-up-false') || !popTwo.classList.contains('pop-up-false')) {
+      popOne.classList.add('pop-up-false');
+      popTwo.classList.add('pop-up-false')
+    }
     let pop = document.getElementById(`pop${e.target.id}`);
     console.log(pop)
     if (pop.classList.contains('pop-up-false')) {
 
-      console.log('true')
       pop.classList.remove('pop-up-false')
 
     } else {
@@ -99,6 +89,17 @@ function btnFun(e) {
 }
 const popOne = document.getElementById('pop0');
 const popTwo = document.getElementById('pop1');
+
+const emailBtn = document.getElementById('email-popup-button');
+const emailContactBtn = document.getElementById('email-contact-btn');
+
+emailBtn.addEventListener('click', () => {
+  window.open('mailto:jocovic099@gmail.com')
+})
+emailContactBtn.addEventListener('click', () => {
+  window.open('mailto:jocovic099@gmail.com')
+})
+
 
 window.onclick = (event) => {
   console.log(event)
@@ -112,4 +113,9 @@ window.onclick = (event) => {
 };
 
 const icons = document.querySelector('.icons')
+
+/* icons.addEventListener('click', () => {
+  console.log('aa')
+  window.open('mailto:test@gmail.com')
+}) */
 
