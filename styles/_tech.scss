@@ -16,12 +16,17 @@
 .technologies-first {
   display: flex;
   position: relative;
-  left: -70px;
+  //left: -70px;
+  left: 70px;
   top: 33px;
   transition: 1s;
 }
-.technologies-last {
+.responsive-part {
   display: none;
+}
+.technologies-last {
+  //display: none;
+  display: flex;
   position: relative;
   left: 70px;
   top: -33px;
@@ -47,7 +52,12 @@
   p { 
   text-align: center;
   line-height: 115px;
-  margin: 0px
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px
   }
 }
 }
