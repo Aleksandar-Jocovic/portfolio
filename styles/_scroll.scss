@@ -17,11 +17,11 @@ html {
 .scroll-btn-wrap{
   position: absolute;
   margin: 0 auto;
-  height: 6px;
-  width: 31px;
-  bottom: 68px;
-  width: 31px;
-  right:  calc(50% - 16px);
+  //height: 6px;
+  width: 30px;
+  bottom: 82px;
+
+  right:  calc(50% - 18px);
   animation: scroll-down 1s ease-in-out infinite;
   text-align: center;
   z-index: 1;
@@ -31,14 +31,13 @@ html {
     fill:set-text-color($primary-color);
     z-index: 333;
     position: absolute;
-    //top: 4px;
     left: -0px;
   }
 }
 
 
 @keyframes scroll-down {
-  100% {bottom: 67px;}
+  100% {bottom: 81px;}
 }
 
 @keyframes scroll-arrow {
@@ -48,43 +47,33 @@ html {
   100% { opacity: 1;}
 }
 //arrow 
-.arrow {
+.arrow, .arrow2 {
   position: relative;
   animation: scroll-arrow 1.5s ease-in-out infinite;
   margin-top: 8px;
   text-align: center;
   height: 20px;
   p {
-  //transform: rotate(45deg);
-  color:set-text-color($primary-color);
-  position: relative;
-  left:  calc(50% - 14.5px);
-  margin: 0;
-  width: 30px;
-  }
-  svg {
+    color:set-text-color($primary-color);
     position: relative;
-    margin: 0 auto;
-    fill:set-text-color($primary-color);
-    transform: rotate(90deg); 
+    left:  calc(50% - 15px);
+    margin: 0;
+    width: 30px;
   }
+  // svg {
+  //   position: relative;
+  //   margin: 0 auto;
+  //   fill:set-text-color($primary-color);
+  //   transform: rotate(90deg); 
+  // }
 }
 
 .arrow2 {
-  //margin-top: 8px;
-  animation: scroll-arrow 1.5s ease-in-out infinite;
   animation-delay: 0.2s;
-  position: relative;
-  text-align: center;
-  height: 20px;
-  bottom: 7px;
-  p {
-    width: 30px;
-    position: relative;
-    left:  calc(50% - 14.5px);
-    color:set-text-color($primary-color);
-    margin: 0;
-  } 
+  //bottom: 7px;
+  top: -7px;
+  margin-top:0;
+  
 }
 
 .inner-arrow {
@@ -156,7 +145,6 @@ html {
   background: linear-gradient(to top, rgba(255,0,0,0), $secondary-color);
   animation: animate4 2s linear infinite;
   animation-delay: 1s;
-
 }
 
 @keyframes animate4 {
@@ -164,11 +152,9 @@ html {
   100% { transform: translateY(-100%);}
 }
 
-
 // small heading title animation
 .opacity-on-scroll {
   animation: opac 1s forwards;
-  //animation-delay: 200s;
 }
 
 // icons animation 
@@ -192,33 +178,20 @@ html {
   animation: iconsSlide 1s forwards ease-in-out;
   position: relative;
   opacity: 0;
-  //transform: translateY(40px)
 }
 
 @keyframes iconsSlide {
-/* 0% {opacity: 0;}
-80% {opacity: 0.5;} */
-100% {transform: none; opacity: 1; top: 0; }
+  100% {
+    transform: none;
+    opacity: 1;
+    top: 0; 
+  }
 }
 
-
-//// Animation
-
-//Title animation
-.slideIn {
-  // animation: slide 1200ms forwards ease;
-  // opacity: 0.8;
-  // position: relative;
-  // transform: translateX(-105%);
-  // will-change: transform;
-}
 //title animation
 @keyframes slide {
   0% {opacity: 0.9;}
-  /* 90% {opacity: 0.7; transform: none;} */
   100% {opacity: 1; transform: none;}
-  /* 90% {opacity: 1; right: 5px;}
-  100% {right: 0; opacity: 1;} */
 }
 
 //img bio animation
@@ -250,13 +223,6 @@ html {
   width: 260px;
   max-width: 260px;
   margin: 0 auto;
-  // a {
-  //   overflow: hidden; 
-  //   img {
-  //     @include easeOut;
-  //     z-index: 100;
-  //   }
-  // }
 }
 .work-img-vrap {
   overflow: hidden;
@@ -267,10 +233,6 @@ html {
   position: relative;
 }
 
-/* .work-img-vrap:hover {
-  border: 2px  solid white;
-} */
-
 // project-info
 
 .project-info {
@@ -279,10 +241,11 @@ html {
   left: -150px;
   height: 50px;
   width: 330px;
+  will-change: width;
   transform: rotateZ(45deg);
   background: rgba($color: $secondary-color, $alpha: 0.6);
   border: none;
-  transition: 0.4s;
+  transition: 400ms ease-in-out;
 }
 
 .first-svg {
@@ -290,11 +253,10 @@ html {
   left: 5px;
   bottom: 5px;
   fill: set-text-color($primary-color);
-  //opacity: 0.7;
   transform: rotateZ(-45deg);
   width: 22px;
   height: 22px;
-  transition: 0.4s;
+  transition: 300ms ease-in-out;
 }
 .second-svg {
   display: block;
@@ -307,6 +269,7 @@ html {
   width: 22px;
   height: 22px;
   opacity: 0;
+  transition: 200ms;
 }
 .project-info-button-vrap {
   position: absolute;
@@ -316,27 +279,45 @@ html {
   width: 70px;
   height: 40px;
   overflow: hidden;
-  //border: 1px solid black;
-
   z-index: 1;
 }
 .project-info-button {
   position: absolute;
-  background: /* rgb(219, 219, 219) */ transparent;
-  //opacity: 0.7;
+  background: transparent;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
   color: set-text-color($primary-color);
-  //opacity: 0.7;
   width: 70px;
   height: 40px;
+  //transform: translate(101%, -101%);
   right: -100%;
   top: -100%;
+  will-change: transform;
   border: none;
   outline: none;
+}
+//stroke animation
+.project-info-button svg,
+.project-info-button svg rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  pointer-events: none;
+} 
+
+.project-info-button svg rect {
+  stroke: transparent;
+  stroke-width: 8;
+  transition: 300ms;
+  stroke-dasharray: 30 80;
+  stroke-dashoffset: 55;
+
 }
 
 //hover efect
@@ -348,26 +329,25 @@ html {
 }
 .work-img-vrap:hover {
   .first-svg {
-    left: 146px;
+    left: 146.5px;
     bottom: 102px;
   }
   .second-svg {
     animation: displaySecondSvg 0.4s ease forwards;
-    animation-delay: 0.4s;
-    //display: block;
+    animation-delay: 250ms;
   }
   .project-info-button {
     animation: displayProjectBtn 0.4s ease forwards;
-    animation-delay: 500ms;
-    // background-color: red;
+    animation-delay: 350ms;
     cursor: pointer;
     z-index: 100;
   }
 }
 
-.project-info-button:hover {
-  //color: rgb(179, 174, 174);
-  transform: scale(1.1);
+.project-info-button:hover svg rect {
+  stroke: #fff;
+  stroke-dasharray: 30 80;
+  stroke-dashoffset: 125;
 }
 
 //animations info about project
@@ -382,17 +362,10 @@ html {
 @keyframes displaySecondSvg {
   100% {
     opacity: 1;
-    left: 88px;
-    bottom: 73px;
+    left: 86.5px;
+    bottom: 72px;
   }
-  // 100% {
-  //   opacity: 0;
-  // }
 }
-
-// project item popup
-
-
 
 // contact 
 .contact-info-form {
@@ -406,6 +379,14 @@ html {
   
 }
 .contact-info-item {
+  background: darken($color: $primary-color, $amount: 3);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  margin-top: 15px;
+  padding: 0 10px;
   a {
     display: flex;
     svg {
@@ -413,28 +394,17 @@ html {
       top: 15px;
     }
   }
-  //background:rgba(255, 255, 255, 0.7);
-  background: darken($color: $primary-color, $amount: 3);
-  /* opacity: 0.7; */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  //border: 1px solid $secondary-color;
-  height: 50px;
-  margin-top: 15px;
-  padding: 0 10px;
-    svg {
-      width: 30px;
-      height: 30px;
-      fill: $secondary-color;
-      margin-right: 10px;
-    }
-    p {
-      font-size: 18px;
-      color: set-text-color($primary-color);
-      border-left: 1px solid $secondary-color;
-    }
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $secondary-color;
+    margin-right: 10px;
+  }
+  p {
+    font-size: 18px;
+    color: set-text-color($primary-color);
+    border-left: 1px solid $secondary-color;
+  }
  
 }
 
@@ -451,28 +421,23 @@ html {
   cursor: pointer;
 }
 
-
 // form
 .contact-form {
   width: 40%;
   transform: translateX(50%);
   opacity: 0.3;
-  //background: rgba(255, 255, 255, 0.7);
-  // background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
   background: darken($color: $primary-color, $amount: 3);
-
   padding: 20px;
 }
+
 form {
   margin: 0 auto;
   text-align: center;
-  //margin-top: 50px;
   transition: all 4s ease-in-out;
   color: set-text-color($primary-color);
 }
 
 .form-control {
-  //text-align: center;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: transparent;
@@ -487,7 +452,6 @@ form {
 input {
   height: 45px;
   color: set-text-color($primary-color);
-
 }
 
 form .submit {  
@@ -529,6 +493,5 @@ form .submit:hover {
   transition: 0.2s;
   transition-timing-function: ease-in-out;
   user-select: none;
-  //border: 3px solid $darkBlue;
 }
 

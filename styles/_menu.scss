@@ -36,23 +36,31 @@
 //menu overlay
 
 .menu {
-  position: fixed;
+  position: absolute;
   top: 0;
-  width: 100%;
-  opacity: 1;
-  visibility: hidden;
+  right: 0;
+  width: 400px;
+  //opacity: 1;
+  //visibility: visible;
+  transform: translateX(103%);
+  transition: transform 350ms ease-out;
+  will-change: transform;
+
 
   &.show {
-    visibility: visible;
+    //visibility: visible;
+    transform: none;
     z-index: 2;
+    transition: transform 270ms ease-in;
+
   }
   &-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
-    width: 50%;
+    //float: left;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     position: absolute;
@@ -63,45 +71,38 @@
     padding: 0;
     background: darken($color: $primary-color, $amount: 5);
     list-style: none;
-    transform: translate3d(0, -100%, 0);
+    //transform: translate3d(0, -100%, 0);
     @include easeOut;
     &.show {
       //slide in from top
-      transform: translate3d(0, 0, 0);
+      //transform: translate3d(0, 0, 0);
+      //transform: translateX(-103%)
+
     }
 
   }
 
   //bransdinig side 
-  &-branding {
-    background: $primary-color;
-    transform: translate3d(0, 100%, 0);
-    @include easeOut;
-    &.show {
-      //slide in from top
-      transform: translate3d(0, 0, 0);
-    }
-
-  .portrait {
-    width: 250px;
-    height: 250px;
-    background: url('../images/usvizaSm.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    border: solid 3px $secondary-color;
-  }
-}
+//   &-branding {
+//     background: $primary-color;
+//     transform: translate3d(0, 100%, 0);
+//     @include easeOut;
+//     &.show {
+//       //slide in from top
+//       //transform: translate3d(0, 0, 0);
+//       transform: translateX(-103%)
+//     }
+// }
 
   
   .nav-item {
-    transform: translate3d(600px, 0, 0);
-    @include easeOut;
+/*     transform: translate3d(600px, 0, 0);
+    @include easeOut; */
   
     &.show {
       //slide in from right
-      transform: translate3d(0, 0, 0);
+      //transform: translate3d(0, 0, 0);
+
     }
     &.current > a{ 
       color: $secondary-color;
@@ -113,7 +114,7 @@
     width: 142px;
     display: inline-block;
     position: relative;
-    font-size: 30px;
+    font-size: 28px;
     text-transform: uppercase;
     text-align: center;
     padding: 1rem 0;
@@ -124,12 +125,5 @@
     &:hover {
       color: $secondary-color;
     }
-  }
-}
-
-//delay each nav=item slide by 0.1 s
-@for $x from 1 through 4 {
-  .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
   }
 }

@@ -20,8 +20,6 @@
         <div class="btn-line"></div>
       </div>
       <nav class="menu">
-        <div class="menu-branding">
-        </div>
         <ul class="menu-nav">
           <li class="nav-item current" id="homeId">
             <a href="#home" class="nav-link">
@@ -98,8 +96,8 @@
     </main>
 
     <div class="scroll-btn-wrap">
-      <svg width="24" height="24" viewBox="0 0 24 24">
-        <path d="M16 1c0-.552-.447-1-1-1s-1 .448-1 1v4c0 .552.447 1 1 1s1-.448 1-1v-4z"></path>
+      <svg height="24" width="24">
+        <line x1="12" y1="10" x2="12" y2="14" style="stroke:rgb(255,255,255);stroke-width:2;stroke-linecap:round;" />
       </svg>
     </div>
 
@@ -138,7 +136,10 @@
 
         <div class="technologies-vrap on-appear">
 
+
           <div class="technologies-first">
+
+
             <div class="techno-vrap">
               <div class="techno">
                 <p>HTML5</p>
@@ -157,7 +158,7 @@
             </div>
             <div class="techno-vrap responsive-part">
               <div class="techno">
-                <p>BOOTSTRAP</p>
+                <p>REACT</p>
               </div>
             </div>
           </div>
@@ -165,7 +166,7 @@
           <div class="technologies-second">
             <div class="techno-vrap">
               <div class="techno">
-                <p>REACT</p>
+                <p>BOOTSTRAP4</p>
               </div>
             </div>
 
@@ -193,13 +194,13 @@
               </div>
             </div>
           </div>
-
+          <div class="technologies-bottom">
+          </div>
         </div>
 
         <div class="technologies-vrap technologies-vrap-small on-appear">
 
           <div class="technologies-single">
-
             <div class="techno-vrap">
               <div class="techno">
                 <p>HTML5</p>
@@ -207,9 +208,7 @@
             </div>
           </div>
 
-
           <div class="technologies-first">
-
             <div class="techno-vrap">
               <div class="techno">
                 <p>JAVASCRIPT</p>
@@ -223,15 +222,13 @@
           </div>
 
           <div class="technologies-second">
-
             <div class="techno-vrap techno-skill">
               <div class="techno">
                 <p>SKILLS</p>
               </div>
             </div>
-
-
           </div>
+
           <div class="technologies-last">
             <div class="techno-vrap">
               <div class="techno">
@@ -244,8 +241,8 @@
               </div>
             </div>
           </div>
-          <div class="technologies-single end">
 
+          <div class="technologies-single end">
             <div class="techno-vrap">
               <div class="techno">
                 <p>BOOTSTRAP</p>
@@ -254,8 +251,6 @@
           </div>
 
         </div>
-
-      </div>
     </main>
 
     <main id="work" class="itemSpy">
@@ -265,14 +260,34 @@
       </div>
 
       <div id="work-pop-up">
-        <h2 id="work-pop-up-title">Norms React App</h2>
-        <div class="work-pop-up-images">
-          <img id="pop-img1" src="./images/quiz.png" alt="">
-          <img id="pop-img2" src="./images/quiz.png" alt="">
-          <img id="pop-img3" src="./images/quiz.png" alt="">
+        <div id="work-pop-up-layer"></div>
+        <button class="work-pop-up-close-button">
+          <svg width="24" height="24">
+            <line x1="2" y1="2" x2="22" y2="22" style="stroke-width:4;" />
+            <line x1="2" y1="22" x2="22" y2="2" style="stroke-width:4;" />
+          </svg>
+        </button>
+
+        <div id="information">
+          <h3 id="work-pop-up-title">Norms React App</h3>
+          <!-- <h3>Technologies</h3> -->
+          <p id="work-pop-up-tech">React</p>
         </div>
-        <h3>Technologies</h3>
-        <p id="work-pop-up-tech">React</p>
+        <div id="carousel">
+          <div class="slide-images">
+            <img id="pop-img1" class="img active-img" src="./images/quiz.png" alt="">
+            <img id="pop-img2" class="img" src="./images/quiz.png" alt="">
+            <img id="pop-img3" class="img" src="./images/quiz.png" alt="">
+          </div>
+          <button class="slide-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+            </svg>
+          </button>
+        </div>
+
+
+
       </div>
 
       <div class="projects">
@@ -287,7 +302,11 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" id="work-pop-up-btn" name="0">info</button>
+              <button class="project-info-button" id="work-pop-up-btn" name="0">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -328,7 +347,11 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" name="1">info</button>
+              <button class="project-info-button" name="1">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -369,7 +392,11 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" name="2">info</button>
+              <button class="project-info-button" name="2">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -410,7 +437,11 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" name="3">info</button>
+              <button class="project-info-button" name="3">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -451,13 +482,17 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" name="4">info</button>
+              <button class="project-info-button" name="4">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
 
-            <img class="item-image" src="./images/random.png" alt="project Norms">
+            <img class="item-image" src="./images/color.png" alt="project Norms">
 
             <!-- </div> -->
           </div>
@@ -494,7 +529,11 @@
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
             </svg>
             <div class="project-info-button-vrap">
-              <button class="project-info-button" name="5">info</button>
+              <button class="project-info-button" name="5">
+                <svg>
+                  <rect></rect>
+                </svg>info
+              </button>
             </div>
             <svg class="second-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
@@ -567,7 +606,7 @@
             <p>&nbsp Aleksandar-Jocovic</p>
           </a>
 
-          <div class="contact-info-item" id="email-contact-btn">
+          <div class="contact-info-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path
                 d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z" />
@@ -604,7 +643,7 @@
 
 
   <script src="js/main.js"></script>
-  <script src="./javascripts/show-on-scroll.js"></script>
+  <!-- <script src="./javascripts/show-on-scroll.js"></script> -->
   <script src="js/back-to-top.js"></script>
 </body>
 

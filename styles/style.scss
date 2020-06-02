@@ -131,6 +131,8 @@ main {
   overflow: hidden;
   padding: 4rem 4rem 0 4rem;
   min-height: calc(100vh - 60px);
+  max-width: 1500px;
+  margin: 0 auto;
 
   &#home {
     overflow: hidden;

@@ -1,11 +1,12 @@
 .technologies-vrap {
   width: 420px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-top: -30px;
+  margin-bottom: -50px;
   user-select: none;
 
 .techno-skill {
-  transform: scale(1.4);
+  transform: scale(1.4) !important;
   background: transparent !important;
   z-index: 1;
 }
@@ -103,10 +104,6 @@
   background: transparent;
 }
 
-.techno-skill:hover {
-  background: $secondary-color;
-}
-
 .technologies-vrap {
   &.on-appear {
     .technologies-second {
@@ -136,18 +133,19 @@
   
 }
 
-@include mediaMd {
-  .technologies-vrap {
-    .technologies-first {
-      left: 70px;
-      .responsive-part {
-        display: none;
-      }
-    }
-    .technologies-last {
-      display: flex;
-    }
+// @include mediaMd {
+//   .technologies-vrap {
+//     margin-top: unset;
 
-  }
-}
+//     .technologies-first {
+//       left: 70px;
+//       .responsive-part {
+//         display: none;
+//       }
+//     }
+//     .technologies-last {
+//       display: flex;
+//     }
 
+//   }
+// }
