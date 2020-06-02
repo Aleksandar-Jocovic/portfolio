@@ -12,8 +12,125 @@
     @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
+    .menu {
+      z-index: -4;
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      background: rgba(77, 77, 77, 0.9);
+      background: #444;
+      color: #fff;
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    body#bg-img {
+      background: url(../images/bNew.jpg);
+      background-attachment: fixed;
+      background-size: cover
+    }
+
+    .title-heading {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      overflow: hidden;
+      padding-bottom: 50px;
+      width: fit-content
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      font-weight: 400
+    }
+
+    h1.lg-heading {
+      font-size: 4rem;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content
+    }
+
+    h2.sm-heading {
+      margin-bottom: 1rem;
+      width: 100%;
+      opacity: 0;
+      -webkit-animation: opac 2s forwards;
+      animation: opac 2s forwards;
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s
+    }
+
+    @-webkit-keyframes opac {
+      100% {
+        opacity: 1;
+        background: rgba(82, 82, 82, 0.5)
+      }
+    }
+
+    @keyframes opac {
+      100% {
+        opacity: 1;
+        background: rgba(82, 82, 82, 0.5)
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none
+    }
+
+    .icons {
+      margin-top: 1rem
+    }
+
+    .icons button {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      outline: none
+    }
+
+    .icons a,
+    .icons button {
+      padding: 0.4rem
+    }
+
+    .icons a svg,
+    .icons button svg {
+      fill: #fff
+    }
+
     .container-layer {
       background: rgba(77, 77, 77, 0.9)
+    }
+
+    main {
+      overflow: hidden;
+      padding: 4rem 4rem 0 4rem;
+      min-height: calc(100vh - 60px);
+      max-width: 1500px;
+      margin: 0 auto
+    }
+
+    main#home {
+      overflow: hidden
+    }
+
+    main#home h1 {
+      margin-top: 20vh
     }
 
     .menu-btn {
@@ -155,123 +272,6 @@
       }
     }
 
-    input {
-      height: 45px;
-      color: #fff
-    }
-
-    * {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box
-    }
-
-    body {
-      background: rgba(77, 77, 77, 0.9);
-      background: #444;
-      color: #fff;
-      height: 100%;
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    }
-
-    body#bg-img {
-      background: url(../images/bNew.jpg);
-      background-attachment: fixed;
-      background-size: cover
-    }
-
-    .title-heading {
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      overflow: hidden;
-      padding-bottom: 50px;
-      width: fit-content
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: 'Raleway', sans-serif;
-      margin: 0;
-      font-weight: 400
-    }
-
-    h1.lg-heading {
-      font-size: 4rem;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content
-    }
-
-    h2.sm-heading {
-      margin-bottom: 1rem;
-      width: 100%;
-      opacity: 0;
-      -webkit-animation: opac 2s forwards;
-      animation: opac 2s forwards;
-      -webkit-animation-delay: 1.5s;
-      animation-delay: 1.5s
-    }
-
-    @-webkit-keyframes opac {
-      100% {
-        opacity: 1;
-        background: rgba(82, 82, 82, 0.5)
-      }
-    }
-
-    @keyframes opac {
-      100% {
-        opacity: 1;
-        background: rgba(82, 82, 82, 0.5)
-      }
-    }
-
-    a {
-      color: #fff;
-      text-decoration: none
-    }
-
-    .icons {
-      margin-top: 1rem
-    }
-
-    .icons button {
-      width: 30px;
-      height: 30px;
-      margin-right: 20px;
-      padding: 0;
-      border: none;
-      background: transparent;
-      outline: none
-    }
-
-    .icons a,
-    .icons button {
-      padding: 0.4rem
-    }
-
-    .icons a svg,
-    .icons button svg {
-      fill: #fff
-    }
-
-    main {
-      overflow: hidden;
-      padding: 4rem 4rem 0 4rem;
-      min-height: calc(100vh - 60px);
-      max-width: 1500px;
-      margin: 0 auto
-    }
-
-    main#home {
-      overflow: hidden
-    }
-
-    main#home h1 {
-      margin-top: 20vh
-    }
 
     @media screen and (max-width:768px) {
       main {
@@ -394,7 +394,7 @@
           </button>
 
           <div class="pop-up pop-up-false" id="pop0">
-            <p>jocovic099@gmial.com</p>
+            <p>jocovic099@gmail.com</p>
             <button id="email-popup-button">Send Email</button>
           </div>
 
@@ -409,7 +409,8 @@
             <p>Skype: live:jocovic099</p>
           </div>
 
-          <a class="iconsSlideIn" id="githubIcon" href="https://github.com/Aleksandar-Jocovic" target="_blank">
+          <a class="iconsSlideIn" id="githubIcon" href="https://github.com/Aleksandar-Jocovic" rel="noreferrer"
+            target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
               <path
                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z" />
@@ -643,7 +644,8 @@
             <!-- </div> -->
           </div>
           <div class="angle-btn-vrap">
-            <a href="https://github.com/Aleksandar-Jocovic/Norms-React-App" target="_blank" class="angle-btn">
+            <a href="https://github.com/Aleksandar-Jocovic/Norms-React-App" target="_blank" rel="noreferrer"
+              class="angle-btn">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -651,7 +653,7 @@
               </svg>
 
             </a>
-            <a href="https://xenodochial-edison-e3f9a0.netlify.app/" target="_blank" class="angle-btn">
+            <a href="https://xenodochial-edison-e3f9a0.netlify.app/" rel="noreferrer" target="_blank" class="angle-btn">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -688,7 +690,8 @@
             <!-- </div> -->
           </div>
           <div class="angle-btn-vrap">
-            <a href="https://github.com/Aleksandar-Jocovic/Project-Base" class="angle-btn" target="_blank">
+            <a href="https://github.com/Aleksandar-Jocovic/Project-Base" class="angle-btn" rel="noreferrer"
+              target="_blank">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -696,7 +699,7 @@
               </svg>
 
             </a>
-            <a href="https://dazzling-montalcini-3e2474.netlify.app" class="angle-btn" target="_blank">
+            <a href="https://dazzling-montalcini-3e2474.netlify.app" class="angle-btn" rel="noreferrer" target="_blank">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -733,7 +736,8 @@
             <!-- </div> -->
           </div>
           <div class="angle-btn-vrap">
-            <a href="https://github.com/Aleksandar-Jocovic/Country-Info" target="_blank" class="angle-btn">
+            <a href="https://github.com/Aleksandar-Jocovic/Country-Info" rel="noreferrer" target="_blank"
+              class="angle-btn">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -741,7 +745,8 @@
               </svg>
 
             </a>
-            <a href="https://aleksandar-jocovic.github.io/Country-Info/" target="_blank" class="angle-btn">
+            <a href="https://aleksandar-jocovic.github.io/Country-Info/" rel="noreferrer" target="_blank"
+              class="angle-btn">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -778,7 +783,8 @@
             <!-- </div> -->
           </div>
           <div class="angle-btn-vrap">
-            <a href="https://github.com/Aleksandar-Jocovic/TECH-SHOP-template" class="angle-btn" target="_blank">
+            <a href="https://github.com/Aleksandar-Jocovic/TECH-SHOP-template" class="angle-btn" rel="noreferrer"
+              target="_blank">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -786,7 +792,8 @@
               </svg>
 
             </a>
-            <a href="https://frosty-kilby-034165.netlify.app/index.html" target="_blank" class="angle-btn">
+            <a href="https://frosty-kilby-034165.netlify.app/index.html" rel="noreferrer" target="_blank"
+              class="angle-btn">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -824,7 +831,7 @@
           </div>
           <div class="angle-btn-vrap">
             <a href="https://github.com/Aleksandar-Jocovic/Random-Color-UNDO-REDO-react-redux" class="angle-btn"
-              target="_blank">
+              rel="noreferrer" target="_blank">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -833,7 +840,7 @@
 
             </a>
             <a href="https://aleksandar-jocovic.github.io/Random-Color-UNDO-REDO-react-redux/" class="angle-btn"
-              target="_blank">
+              rel="noreferrer" target="_blank">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -870,7 +877,8 @@
             <!-- </div> -->
           </div>
           <div class="angle-btn-vrap">
-            <a href="https://github.com/Aleksandar-Jocovic/continent-quiz-app" class="angle-btn" target="_blank">
+            <a href="https://github.com/Aleksandar-Jocovic/continent-quiz-app" rel="noreferrer" class="angle-btn"
+              target="_blank">
               <p>Git Hub</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -878,7 +886,7 @@
               </svg>
 
             </a>
-            <a href="https://keen-meitner-d8cb1c.netlify.app" class="angle-btn" target="_blank">
+            <a href="https://keen-meitner-d8cb1c.netlify.app" class="angle-btn" rel="noreferrer" target="_blank">
 
               <p>Project</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
