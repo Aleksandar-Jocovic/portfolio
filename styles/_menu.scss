@@ -21,7 +21,7 @@
     .btn-line {
       //line one
       &:nth-child(1) {
-        transform: translateY(8px) rotate(-45deg) ;
+        transform: translateY(8px) rotate(-45deg);
       }
       &:nth-child(2) {
         opacity: 0;
@@ -34,76 +34,38 @@
 }
 
 //menu overlay
-
 .menu {
   position: absolute;
   top: 0;
   right: 0;
   width: 400px;
-  //opacity: 1;
-  //visibility: visible;
   transform: translateX(103%);
-  transition: transform 350ms ease-out;
+  transition: transform 350ms ease-in;
   will-change: transform;
 
-
   &.show {
-    //visibility: visible;
     transform: none;
     z-index: 2;
-    transition: transform 270ms ease-in;
-
+    transition: transform 270ms ease-out;
   }
+
   &-nav {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    //float: left;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
   }
   &-nav {
     margin: 0;
     padding: 0;
     background: darken($color: $primary-color, $amount: 5);
     list-style: none;
-    //transform: translate3d(0, -100%, 0);
     @include easeOut;
-    &.show {
-      //slide in from top
-      //transform: translate3d(0, 0, 0);
-      //transform: translateX(-103%)
-
-    }
-
   }
 
-  //bransdinig side 
-//   &-branding {
-//     background: $primary-color;
-//     transform: translate3d(0, 100%, 0);
-//     @include easeOut;
-//     &.show {
-//       //slide in from top
-//       //transform: translate3d(0, 0, 0);
-//       transform: translateX(-103%)
-//     }
-// }
-
-  
   .nav-item {
-/*     transform: translate3d(600px, 0, 0);
-    @include easeOut; */
-  
-    &.show {
-      //slide in from right
-      //transform: translate3d(0, 0, 0);
-
-    }
     &.current > a{ 
       color: $secondary-color;
     }

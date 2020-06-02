@@ -44,10 +44,10 @@
   width: 400px;
   -webkit-transform: translateX(103%);
           transform: translateX(103%);
-  -webkit-transition: -webkit-transform 350ms ease-out;
-  transition: -webkit-transform 350ms ease-out;
-  transition: transform 350ms ease-out;
-  transition: transform 350ms ease-out, -webkit-transform 350ms ease-out;
+  -webkit-transition: -webkit-transform 350ms ease-in;
+  transition: -webkit-transform 350ms ease-in;
+  transition: transform 350ms ease-in;
+  transition: transform 350ms ease-in, -webkit-transform 350ms ease-in;
   will-change: transform;
 }
 
@@ -55,10 +55,10 @@
   -webkit-transform: none;
           transform: none;
   z-index: 2;
-  -webkit-transition: -webkit-transform 270ms ease-in;
-  transition: -webkit-transform 270ms ease-in;
-  transition: transform 270ms ease-in;
-  transition: transform 270ms ease-in, -webkit-transform 270ms ease-in;
+  -webkit-transition: -webkit-transform 270ms ease-out;
+  transition: -webkit-transform 270ms ease-out;
+  transition: transform 270ms ease-out;
+  transition: transform 270ms ease-out, -webkit-transform 270ms ease-out;
 }
 
 .menu-nav {
@@ -77,9 +77,6 @@
           justify-content: center;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
 }
 
 .menu-nav {
@@ -89,11 +86,6 @@
   list-style: none;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
-}
-
-.menu .nav-item {
-  /*     transform: translate3d(600px, 0, 0);
-    @include easeOut; */
 }
 
 .menu .nav-item.current > a {
@@ -985,7 +977,6 @@ form .submit:hover {
   width: 420px;
   margin: 0 auto;
   margin-top: -30px;
-  margin-bottom: -50px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1330,7 +1321,7 @@ header {
   height: 30px;
   background-color: #858484;
   color: white;
-  margin: 0 0 10px 32px;
+  margin: 10px auto;
 }
 
 .icons {

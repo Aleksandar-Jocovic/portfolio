@@ -8,6 +8,332 @@
     content="Front end developer, intresed in learning new technologies and improving skils for web development  ">
   <title>Aleksandar Jocovic Portofolio website</title>
   <link rel="stylesheet" href="styles/style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+    .container-layer {
+      background: rgba(77, 77, 77, 0.9)
+    }
+
+    .menu-btn {
+      position: absolute;
+      z-index: 3;
+      right: 35px;
+      top: 35px
+    }
+
+    .menu-btn .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: #fff
+    }
+
+    .scroll-wrap {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 50px;
+      margin: 0 auto
+    }
+
+    .scroll-wrap svg {
+      fill: #fff
+    }
+
+    .scroll-btn-wrap {
+      position: absolute;
+      margin: 0 auto;
+      width: 30px;
+      bottom: 82px;
+      right: calc(50% - 18px);
+      -webkit-animation: scroll-down 1s ease-in-out infinite;
+      animation: scroll-down 1s ease-in-out infinite;
+      text-align: center;
+      z-index: 1
+    }
+
+    .scroll-btn-wrap svg {
+      margin: 0 auto;
+      text-align: center;
+      fill: #fff;
+      z-index: 333;
+      position: absolute;
+      left: -0px
+    }
+
+    @-webkit-keyframes scroll-down {
+      100% {
+        bottom: 81px
+      }
+    }
+
+    @keyframes scroll-down {
+      100% {
+        bottom: 81px
+      }
+    }
+
+    @-webkit-keyframes scroll-arrow {
+      0% {
+        opacity: 0
+      }
+
+      10% {
+        opacity: 0.3
+      }
+
+      30% {
+        opacity: 0.5
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    @keyframes scroll-arrow {
+      0% {
+        opacity: 0
+      }
+
+      10% {
+        opacity: 0.3
+      }
+
+      30% {
+        opacity: 0.5
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    .arrow,
+    .arrow2 {
+      position: relative;
+      -webkit-animation: scroll-arrow 1.5s ease-in-out infinite;
+      animation: scroll-arrow 1.5s ease-in-out infinite;
+      margin-top: 8px;
+      text-align: center;
+      height: 20px
+    }
+
+    .arrow p,
+    .arrow2 p {
+      color: #fff;
+      position: relative;
+      left: calc(50% - 15px);
+      margin: 0;
+      width: 30px
+    }
+
+    .arrow2 {
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+      top: -7px;
+      margin-top: 0
+    }
+
+    @-webkit-keyframes iconsSlide {
+      100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+        top: 0
+      }
+    }
+
+    @keyframes iconsSlide {
+      100% {
+        -webkit-transform: none;
+        transform: none;
+        opacity: 1;
+        top: 0
+      }
+    }
+
+    input {
+      height: 45px;
+      color: #fff
+    }
+
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      background: rgba(77, 77, 77, 0.9);
+      background: #444;
+      color: #fff;
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    body#bg-img {
+      background: url(../images/bNew.jpg);
+      background-attachment: fixed;
+      background-size: cover
+    }
+
+    .title-heading {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      overflow: hidden;
+      padding-bottom: 50px;
+      width: fit-content
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      font-weight: 400
+    }
+
+    h1.lg-heading {
+      font-size: 4rem;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content
+    }
+
+    h2.sm-heading {
+      margin-bottom: 1rem;
+      width: 100%;
+      opacity: 0;
+      -webkit-animation: opac 2s forwards;
+      animation: opac 2s forwards;
+      -webkit-animation-delay: 1.5s;
+      animation-delay: 1.5s
+    }
+
+    @-webkit-keyframes opac {
+      100% {
+        opacity: 1;
+        background: rgba(82, 82, 82, 0.5)
+      }
+    }
+
+    @keyframes opac {
+      100% {
+        opacity: 1;
+        background: rgba(82, 82, 82, 0.5)
+      }
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none
+    }
+
+    .icons {
+      margin-top: 1rem
+    }
+
+    .icons button {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      outline: none
+    }
+
+    .icons a,
+    .icons button {
+      padding: 0.4rem
+    }
+
+    .icons a svg,
+    .icons button svg {
+      fill: #fff
+    }
+
+    main {
+      overflow: hidden;
+      padding: 4rem 4rem 0 4rem;
+      min-height: calc(100vh - 60px);
+      max-width: 1500px;
+      margin: 0 auto
+    }
+
+    main#home {
+      overflow: hidden
+    }
+
+    main#home h1 {
+      margin-top: 20vh
+    }
+
+    @media screen and (max-width:768px) {
+      main {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        padding: 2.7rem
+      }
+
+      main .lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+        font-size: unset;
+        font-size: 44px !important;
+        width: 100%
+      }
+
+      .menu {
+        width: 100%
+      }
+
+      .menu-btn {
+        right: 15px
+      }
+
+      .title-heading {
+        margin: 0 auto
+      }
+
+      #work-pop-up {
+        max-width: 500px;
+        padding: 10px
+      }
+    }
+
+    @media screen and (max-width:500px) {
+      #work-pop-up {
+        padding: 5px
+      }
+
+      main#home h1 {
+        margin-top: 10vh
+      }
+
+      main {
+        padding: 20px
+      }
+
+      #back-to-top-btn {
+        right: 5px
+      }
+
+      .menu-btn {
+        right: 10px
+      }
+
+      .title-heading {
+        margin: 0 auto
+      }
+    }
+  </style>
 </head>
 
 <body id="bg-img">
@@ -643,8 +969,6 @@
 
 
   <script src="js/main.js"></script>
-  <!-- <script src="./javascripts/show-on-scroll.js"></script> -->
-  <script src="js/back-to-top.js"></script>
 </body>
 
 </html>
