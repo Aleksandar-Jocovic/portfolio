@@ -38,6 +38,7 @@
 }
 
 .menu {
+  z-index: -4;
   position: absolute;
   top: 0;
   right: 0;
@@ -1308,6 +1309,7 @@ header {
   background: rgba(77, 77, 77, 0.9);
   border: 1px solid #858484;
   padding: 0 10px;
+  text-align: center;
   z-index: 2;
 }
 
