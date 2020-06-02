@@ -70,11 +70,81 @@
       animation-delay: 1.5s
     }
 
-    @-webkit-keyframes opac {
+    .icons {
+      margin-top: 1rem;
+    }
+
+    .icons button {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .icons button svg {
+      pointer-events: none;
+    }
+
+    .icons button:hover svg {
+      fill: #858484;
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+    }
+
+    .icons a,
+    .icons button {
+      padding: 0.4rem;
+    }
+
+    .icons a svg,
+    .icons button svg {
+      fill: #fff;
+    }
+
+    .icons a svg:hover,
+    .icons button svg:hover {
+      fill: #858484;
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+    }
+
+    .iconsSlideIn:nth-child(1) {
+      animation-delay: 200ms;
+      transform: translateY(40px);
+
+    }
+
+    .iconsSlideIn:nth-child(3) {
+      animation-delay: 500ms;
+      transform: translateY(40px);
+    }
+
+    #githubIcon {
+      position: relative;
+      animation-delay: 800ms;
+      top: 40px;
+    }
+
+    .iconsSlideIn {
+      animation: iconsSlide 1s forwards ease-in-out;
+      position: relative;
+      opacity: 0;
+    }
+
+    @keyframes iconsSlide {
       100% {
+        transform: none;
         opacity: 1;
-        background: rgba(82, 82, 82, 0.5)
+        top: 0;
       }
+    }
+
+    .opacity-on-scroll {
+      animation: opac 1s forwards;
     }
 
     @keyframes opac {
